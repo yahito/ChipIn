@@ -1,0 +1,39 @@
+flowchart TD
+    subgraph "Debt Detected"
+        Start([View Balances]) --> DebtExists[User sees they owe/are owed money]
+        DebtExists --> UserAction{User action?}
+    end
+    
+    subgraph "Path Selection"
+        UserAction -->|Debtor Selects "I Paid This"| DebtorFlow
+        UserAction -->|Creditor Selects "Mark as Paid"| CreditorFlow
+    end
+    
+    subgraph "Debtor Flow (I paid)"
+        DebtorFlow[Debtor records payment] --> CheckExisting{Existing settlement?}
+        CheckExisting -->|Yes| ShowExisting[Show Alert: Settlement Exists]
+        CheckExisting -->|No| CreatePending[Create PENDING settlement]
+        CreatePending --> WaitConfirmation[Wait for creditor to confirm]
+    end
+    
+    subgraph "Creditor Flow (Mark as Paid)"
+        CreditorFlow[Creditor marks as paid externally] --> CreateConfirmed[Create CONFIRMED settlement\nmarked as EXTERNAL]
+        CreateConfirmed --> UpdateBalancesExt[Update balances immediately]
+    end
+    
+    subgraph "Creditor Approval"
+        WaitConfirmation --> CreditorDecision{Creditor decision}
+        CreditorDecision -->|Confirm| MarkConfirmed[Mark settlement as CONFIRMED]
+        CreditorDecision -->|Reject| MarkRejected[Mark settlement as REJECTED]
+        MarkConfirmed --> UpdateBalances[Update balances]
+    end
+    
+    %% Styling
+    classDef startEnd fill:#6CE5E8,stroke:#333,stroke-width:2px
+    classDef process fill:#B3E5FC,stroke:#333,stroke-width:1px
+    classDef decision fill:#FFE082,stroke:#333,stroke-width:1px
+    classDef subgraph fill:#F5F5F5,stroke:#BDBDBD,stroke-width:1px
+    
+    class Start,UpdateBalances,UpdateBalancesExt startEnd
+    class DebtExists,DebtorFlow,CreditorFlow,ShowExisting,CreatePending,WaitConfirmation,CreateConfirmed,MarkConfirmed,MarkRejected process
+    class UserAction,CheckExisting,CreditorDecision decision

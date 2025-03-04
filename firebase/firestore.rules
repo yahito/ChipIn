@@ -53,12 +53,22 @@ service cloud.firestore {
                     (get(/databases/$(database)/documents/expenseLists1/$(expenseListId)).data.ownerId == request.auth.uid ||
                     request.auth.token.email in get(/databases/$(database)/documents/expenseLists1/$(expenseListId)).data.sharedEmails);
         
-        // Allow creating if user has access to the parent list and is the payer
+        // Allow creating a settlement in two cases:
+        // Case 1: Standard - user is the payer (fromEmail)
+        // Case 2: External - user is the receiver (toEmail) AND settlement is pre-confirmed
         allow create: if request.auth != null && 
                       (get(/databases/$(database)/documents/expenseLists1/$(expenseListId)).data.ownerId == request.auth.uid ||
                       request.auth.token.email in get(/databases/$(database)/documents/expenseLists1/$(expenseListId)).data.sharedEmails) &&
-                      request.auth.token.email == request.resource.data.fromEmail &&
-                      request.auth.token.email == request.resource.data.createdByEmail;
+                      (
+                        // Case 1: Regular settlement (user is payer)
+                        (request.auth.token.email == request.resource.data.fromEmail &&
+                         request.auth.token.email == request.resource.data.createdByEmail) ||
+                        // Case 2: External settlement (user is receiver and pre-confirms)
+                        (request.auth.token.email == request.resource.data.toEmail &&
+                         request.auth.token.email == request.resource.data.createdByEmail &&
+                         request.auth.token.email == request.resource.data.confirmedByEmail &&
+                         request.resource.data.status == "confirmed")
+                      );
         
         // Allow updating if user has access to the parent list, is the recipient, and only updating specific fields
         allow update: if request.auth != null && 

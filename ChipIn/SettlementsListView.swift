@@ -13,6 +13,48 @@ struct SettlementsListView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var cloudKitHelper = FirebaseStorageHelper()
     @State private var currentUserEmail: String?
+    @State private var filterStatus: SettlementFilterStatus = .all
+    
+    enum SettlementFilterStatus: String, CaseIterable, Identifiable {
+        case all = "All"
+        case pending = "Pending"
+        case confirmed = "Confirmed"
+        case rejected = "Rejected"
+        
+        var id: String { self.rawValue }
+        
+        func matches(_ status: Settlement.SettlementStatus) -> Bool {
+            switch self {
+            case .all:
+                return true
+            case .pending:
+                return status == .pending
+            case .confirmed:
+                return status == .confirmed
+            case .rejected:
+                return status == .rejected
+            }
+        }
+    }
+    
+    var filteredSettlements: [Settlement] {
+        if filterStatus == .all {
+            return settlements
+        } else {
+            return settlements.filter { settlement in
+                switch filterStatus {
+                case .pending:
+                    return settlement.status == .pending
+                case .confirmed:
+                    return settlement.status == .confirmed
+                case .rejected:
+                    return settlement.status == .rejected
+                case .all:
+                    return true
+                }
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -55,19 +97,42 @@ struct SettlementsListView: View {
                     }
                     .padding(.top, 60)
                 } else {
-                    List {
-                        ForEach(settlements) { settlement in
-                            SettlementRow(settlement: settlement, currentUserEmail: currentUserEmail ?? "")
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    if settlement.status == .pending && settlement.toEmail == currentUserEmail {
-                                        selectedSettlement = settlement
-                                        showingActionSheet = true
-                                    }
+                    VStack {
+                        Picker("Filter", selection: $filterStatus) {
+                            ForEach(SettlementFilterStatus.allCases) { status in
+                                Text(status.rawValue).tag(status)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        .padding(.horizontal)
+                        
+                        if filteredSettlements.isEmpty {
+                            VStack(spacing: 20) {
+                                Image(systemName: "magnifyingglass")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.gray)
+                                
+                                Text("No \(filterStatus.rawValue.lowercased()) settlements")
+                                    .font(.headline)
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(.top, 60)
+                        } else {
+                            List {
+                                ForEach(filteredSettlements) { settlement in
+                                    SettlementRow(settlement: settlement, currentUserEmail: currentUserEmail ?? "")
+                                        .contentShape(Rectangle())
+                                        .onTapGesture {
+                                            if settlement.status == .pending && settlement.toEmail == currentUserEmail {
+                                                selectedSettlement = settlement
+                                                showingActionSheet = true
+                                            }
+                                        }
                                 }
+                            }
+                            .listStyle(InsetGroupedListStyle())
                         }
                     }
-                    .listStyle(InsetGroupedListStyle())
                 }
             }
             .navigationTitle("Settlements")
@@ -75,6 +140,12 @@ struct SettlementsListView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
                         presentationMode.wrappedValue.dismiss()
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Refresh") {
+                        loadSettlements()
                     }
                 }
             }
@@ -127,7 +198,7 @@ struct SettlementsListView: View {
                     }
                 }
                 
-                self.settlements = fetchedSettlements
+                self.settlements = fetchedSettlements.sorted { $0.date > $1.date } // Sort newest first
                 self.isLoading = false
             }
         }
@@ -205,6 +276,14 @@ struct SettlementRow: View {
         return settlement.fromEmail == currentUserEmail
     }
     
+    private var isExternal: Bool {
+        // External settlements are created and confirmed by the same person (the recipient)
+        return settlement.status == .confirmed &&
+               settlement.confirmedByEmail != nil &&
+               settlement.createdByEmail == settlement.confirmedByEmail &&
+               settlement.toEmail == settlement.createdByEmail
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -229,12 +308,23 @@ struct SettlementRow: View {
                         .font(.headline)
                         .foregroundColor(.blue)
                     
-                    Text(settlement.status.rawValue.capitalized)
-                        .font(.caption)
-                        .padding(4)
-                        .background(statusColor.opacity(0.2))
-                        .foregroundColor(statusColor)
-                        .cornerRadius(4)
+                    HStack(spacing: 4) {
+                        if isExternal {
+                            Text("External")
+                                .font(.caption)
+                                .padding(4)
+                                .background(Color.purple.opacity(0.2))
+                                .foregroundColor(.purple)
+                                .cornerRadius(4)
+                        }
+                        
+                        Text(settlement.status.rawValue.capitalized)
+                            .font(.caption)
+                            .padding(4)
+                            .background(statusColor.opacity(0.2))
+                            .foregroundColor(statusColor)
+                            .cornerRadius(4)
+                    }
                 }
             }
             
