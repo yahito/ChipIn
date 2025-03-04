@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC512BD34AA1E4900758C821 /* Pods_ChipIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F1A11A201D69DE3D8BC8B9 /* Pods_ChipIn.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F69F4E52D6CE29A00D7708C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F69F4CC2D6CE29900D7708C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F69F4D32D6CE29900D7708C;
+			remoteInfo = ChipIn;
+		};
+		5F69F4EF2D6CE29A00D7708C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F69F4CC2D6CE29900D7708C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F69F4D32D6CE29900D7708C;
+			remoteInfo = ChipIn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A203BEE6B4CFB7D5436689F /* Pods-ChipIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipIn.debug.xcconfig"; path = "Target Support Files/Pods-ChipIn/Pods-ChipIn.debug.xcconfig"; sourceTree = "<group>"; };
+		5F69F4D42D6CE29900D7708C /* ChipIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChipIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F69F4E42D6CE29A00D7708C /* ChipInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChipInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F69F4EE2D6CE29A00D7708C /* ChipInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChipInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D70CD909DCA08D3CF0743F /* Pods-ChipIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipIn.release.xcconfig"; path = "Target Support Files/Pods-ChipIn/Pods-ChipIn.release.xcconfig"; sourceTree = "<group>"; };
+		D8F1A11A201D69DE3D8BC8B9 /* Pods_ChipIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5F69F52D2D6D0AF300D7708C /* Exceptions for "ChipIn" folder in "ChipIn" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5F69F4D32D6CE29900D7708C /* ChipIn */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5F69F4D62D6CE29900D7708C /* ChipIn */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5F69F52D2D6D0AF300D7708C /* Exceptions for "ChipIn" folder in "ChipIn" target */,
+			);
+			path = ChipIn;
+			sourceTree = "<group>";
+		};
+		5F69F4E72D6CE29A00D7708C /* ChipInTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChipInTests;
+			sourceTree = "<group>";
+		};
+		5F69F4F12D6CE29A00D7708C /* ChipInUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChipInUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F69F4D12D6CE29900D7708C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC512BD34AA1E4900758C821 /* Pods_ChipIn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F69F4E12D6CE29A00D7708C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F69F4EB2D6CE29A00D7708C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F69F4CB2D6CE29900D7708C = {
+			isa = PBXGroup;
+			children = (
+				5F69F4D62D6CE29900D7708C /* ChipIn */,
+				5F69F4E72D6CE29A00D7708C /* ChipInTests */,
+				5F69F4F12D6CE29A00D7708C /* ChipInUITests */,
+				5F69F4D52D6CE29900D7708C /* Products */,
+				90C7B165F5DC6F2B28218D4D /* Pods */,
+				E97AD3CDD7A48960A052C5C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5F69F4D52D6CE29900D7708C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F69F4D42D6CE29900D7708C /* ChipIn.app */,
+				5F69F4E42D6CE29A00D7708C /* ChipInTests.xctest */,
+				5F69F4EE2D6CE29A00D7708C /* ChipInUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90C7B165F5DC6F2B28218D4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A203BEE6B4CFB7D5436689F /* Pods-ChipIn.debug.xcconfig */,
+				64D70CD909DCA08D3CF0743F /* Pods-ChipIn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E97AD3CDD7A48960A052C5C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8F1A11A201D69DE3D8BC8B9 /* Pods_ChipIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F69F4D32D6CE29900D7708C /* ChipIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F69F4F82D6CE29A00D7708C /* Build configuration list for PBXNativeTarget "ChipIn" */;
+			buildPhases = (
+				683630D27FB403A41A74D28B /* [CP] Check Pods Manifest.lock */,
+				5F69F4D02D6CE29900D7708C /* Sources */,
+				5F69F4D12D6CE29900D7708C /* Frameworks */,
+				5F69F4D22D6CE29900D7708C /* Resources */,
+				86A9F7F33AD48090106F271B /* [CP] Embed Pods Frameworks */,
+				DE8CE004912E817D9969A85A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5F69F4D62D6CE29900D7708C /* ChipIn */,
+			);
+			name = ChipIn;
+			productName = ChipIn;
+			productReference = 5F69F4D42D6CE29900D7708C /* ChipIn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F69F4E32D6CE29A00D7708C /* ChipInTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F69F4FB2D6CE29A00D7708C /* Build configuration list for PBXNativeTarget "ChipInTests" */;
+			buildPhases = (
+				5F69F4E02D6CE29A00D7708C /* Sources */,
+				5F69F4E12D6CE29A00D7708C /* Frameworks */,
+				5F69F4E22D6CE29A00D7708C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F69F4E62D6CE29A00D7708C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5F69F4E72D6CE29A00D7708C /* ChipInTests */,
+			);
+			name = ChipInTests;
+			productName = ChipInTests;
+			productReference = 5F69F4E42D6CE29A00D7708C /* ChipInTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F69F4ED2D6CE29A00D7708C /* ChipInUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F69F4FE2D6CE29A00D7708C /* Build configuration list for PBXNativeTarget "ChipInUITests" */;
+			buildPhases = (
+				5F69F4EA2D6CE29A00D7708C /* Sources */,
+				5F69F4EB2D6CE29A00D7708C /* Frameworks */,
+				5F69F4EC2D6CE29A00D7708C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F69F4F02D6CE29A00D7708C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5F69F4F12D6CE29A00D7708C /* ChipInUITests */,
+			);
+			name = ChipInUITests;
+			productName = ChipInUITests;
+			productReference = 5F69F4EE2D6CE29A00D7708C /* ChipInUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F69F4CC2D6CE29900D7708C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5F69F4D32D6CE29900D7708C = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					5F69F4E32D6CE29A00D7708C = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 5F69F4D32D6CE29900D7708C;
+					};
+					5F69F4ED2D6CE29A00D7708C = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 5F69F4D32D6CE29900D7708C;
+					};
+				};
+			};
+			buildConfigurationList = 5F69F4CF2D6CE29900D7708C /* Build configuration list for PBXProject "ChipIn" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F69F4CB2D6CE29900D7708C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5F69F4D52D6CE29900D7708C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F69F4D32D6CE29900D7708C /* ChipIn */,
+				5F69F4E32D6CE29A00D7708C /* ChipInTests */,
+				5F69F4ED2D6CE29A00D7708C /* ChipInUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F69F4D22D6CE29900D7708C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F69F4E22D6CE29A00D7708C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F69F4EC2D6CE29A00D7708C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		683630D27FB403A41A74D28B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChipIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86A9F7F33AD48090106F271B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChipIn/Pods-ChipIn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChipIn/Pods-ChipIn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChipIn/Pods-ChipIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8CE004912E817D9969A85A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChipIn/Pods-ChipIn-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChipIn/Pods-ChipIn-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChipIn/Pods-ChipIn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F69F4D02D6CE29900D7708C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F69F4E02D6CE29A00D7708C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F69F4EA2D6CE29A00D7708C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F69F4E62D6CE29A00D7708C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F69F4D32D6CE29900D7708C /* ChipIn */;
+			targetProxy = 5F69F4E52D6CE29A00D7708C /* PBXContainerItemProxy */;
+		};
+		5F69F4F02D6CE29A00D7708C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F69F4D32D6CE29900D7708C /* ChipIn */;
+			targetProxy = 5F69F4EF2D6CE29A00D7708C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5F69F4F62D6CE29A00D7708C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F69F4F72D6CE29A00D7708C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F69F4F92D6CE29A00D7708C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A203BEE6B4CFB7D5436689F /* Pods-ChipIn.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChipIn/ChipIn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChipIn/Preview Content\"";
+				DEVELOPMENT_TEAM = XRK5J4A7KJ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChipIn/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yahito.ChipIn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F69F4FA2D6CE29A00D7708C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64D70CD909DCA08D3CF0743F /* Pods-ChipIn.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChipIn/ChipIn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChipIn/Preview Content\"";
+				DEVELOPMENT_TEAM = XRK5J4A7KJ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChipIn/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yahito.ChipIn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F69F4FC2D6CE29A00D7708C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRK5J4A7KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yahito.ChipInTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChipIn.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChipIn";
+			};
+			name = Debug;
+		};
+		5F69F4FD2D6CE29A00D7708C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRK5J4A7KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yahito.ChipInTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChipIn.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChipIn";
+			};
+			name = Release;
+		};
+		5F69F4FF2D6CE29A00D7708C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRK5J4A7KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yahito.ChipInUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChipIn;
+			};
+			name = Debug;
+		};
+		5F69F5002D6CE29A00D7708C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRK5J4A7KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yahito.ChipInUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChipIn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F69F4CF2D6CE29900D7708C /* Build configuration list for PBXProject "ChipIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F69F4F62D6CE29A00D7708C /* Debug */,
+				5F69F4F72D6CE29A00D7708C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F69F4F82D6CE29A00D7708C /* Build configuration list for PBXNativeTarget "ChipIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F69F4F92D6CE29A00D7708C /* Debug */,
+				5F69F4FA2D6CE29A00D7708C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F69F4FB2D6CE29A00D7708C /* Build configuration list for PBXNativeTarget "ChipInTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F69F4FC2D6CE29A00D7708C /* Debug */,
+				5F69F4FD2D6CE29A00D7708C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F69F4FE2D6CE29A00D7708C /* Build configuration list for PBXNativeTarget "ChipInUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F69F4FF2D6CE29A00D7708C /* Debug */,
+				5F69F5002D6CE29A00D7708C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F69F4CC2D6CE29900D7708C /* Project object */;
+}
